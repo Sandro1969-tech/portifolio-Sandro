@@ -1,0 +1,273 @@
+/* --- ESTILO COMPLETO: SANDRO ROGÉRIO FELIX --- */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cor (Visual Dark Neon) */
+:root {
+  --bg-color: #0a192f;
+  --bg-secondary: #112240;
+  --text-main: #ccd6f6;
+  --text-highlight: #64ffda;
+  --accent: #233554;
+}
+
+/* Corpo */
+body {
+  background-color: var(--bg-color);
+  font-family: 'Lato', sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-highlight);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: .8rem;
+  background-color: var(--bg-secondary);
+  min-height: 70px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.img-logo {
+  height: 50px !important;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: var(--text-main);
+  transition: .4s;
+}
+
+.nav-links:hover {
+  color: var(--text-highlight);
+  text-decoration: underline;
+}
+
+/* Botões */
+button.box-btn-actions {
+  padding: .6rem 1.2rem;
+  font-size: .9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .4s;
+  background-color: transparent;
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
+}
+
+button.box-btn-actions:hover {
+  background-color: var(--accent);
+  border-color: var(--text-highlight);
+  color: var(--text-highlight);
+}
+
+/* Primeira Seção */
+.first-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+
+.box-text-main {
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: var(--text-highlight);
+}
+
+.link-action {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: var(--text-highlight);
+  color: var(--bg-color);
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.link-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.img-profile {
+  border-radius: 50%;
+  width: 300px !important;
+  height: 300px !important;
+  border: 5px solid var(--text-highlight);
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+  object-fit: cover;
+}
+
+/* Título Geral (H2) */
+.title {
+  color: var(--text-highlight);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center; /* Garante que o texto dentro dele centralize */
+}
+
+/* Segunda Seção (Experiências) */
+.second-section {
+  background-color: var(--bg-secondary);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.second-section ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Terceira Seção (Quem sou eu) */
+.third-section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.third-section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.quem-sou-eu {
+  width: 350px !important; /* Tamanho corrigido conforme conversamos */
+  height: auto !important;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+}
+
+.third-section p {
+  max-width: 500px;
+  text-align: justify;
+}
+
+/* QUARTA SEÇÃO (Projetos) - AJUSTE DE CENTRALIZAÇÃO */
+.fourth-section {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column; /* Coloca o H2 em cima da lista */
+  align-items: center;    /* Centraliza o H2 e a lista horizontalmente */
+  width: 100%;
+}
+
+/* Estilo específico para o H2 dos projetos para garantir o centro */
+.fourth-section .title {
+  display: block;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+#meus-projetos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os botões dos projetos */
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#meus-projetos-list a {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: var(--text-highlight);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  border-radius: 50px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#meus-projetos-list a:hover {
+  background-color: var(--text-highlight);
+  color: var(--bg-color);
+  transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid var(--accent);
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+footer img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+footer i.fa-whatsapp {
+  font-size: 50px;
+  color: #25D366;
+}
